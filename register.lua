@@ -373,7 +373,7 @@ local function craftguide_craft(player, formname, fields)
 					local craft_index = ((y - 1) * 3) + x
 					local craft_item = craft_list[craft_index]
 					if (not craft_item) or (craft_item:is_empty()) or (craft_item:get_name() == needed_item) then
-						itemname = craft_item and craft_item:get_name() or needed_item
+						--itemname = craft_item and craft_item:get_name() or needed_item
 						local needed_stack = ItemStack(needed_item)
 						if player_inv:contains_item("main", needed_stack) then
 							local count = (craft_item and craft_item:get_count() or 0) + 1
